@@ -59,6 +59,11 @@
                 <i class="uil uil-estate nav__icon"></i> Contact Me
               </a>
             </li>
+            <li class="nav__item">
+              <a href="blog.html" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Blog
+              </a>
+            </li>
           </ul>
           <i class="uil uil-times nav__close" id="nav-close"></i>
         </div>
@@ -194,7 +199,7 @@
             <div class="about__buttons">
               <a
                 download=""
-                href="assets/pdf/Alexa-Cv.pdf"
+                href="assets/pdf/Resume.pdf"
                 class="button button--flex"
               >
                 Download CV <i class="uil uil-download-alt button__icon"></i>
@@ -357,6 +362,56 @@
                       <div class="skills__percentage skills__graphql"></div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- other -->
+
+            <div>
+              <!--====================== SKILLS 3 =============================-->
+              <div class="skills__content skills__close">
+                <div class="skills__header">
+                  <i class="uil uil-brackets-curly skills__icon"></i>
+
+                  <div>
+                    <h1 class="skills__title">Others</h1>
+                    <span class="skills__subtitle"></span>
+                  </div>
+
+                  <i class="uil uil-angle-down skills__arrow"></i>
+                </div>
+
+                <div class="skills__list grid">
+                  <div class="skills__data">
+                    <div class="skills__titles">
+                      <h3 class="skills__name">C & C++</h3>
+                      <div class="skills__number">80%</div>
+                    </div>
+                    <div class="skills__bar">
+                      <div class="skills__percentage skills__mysql"></div>
+                    </div>
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles">
+                      <h3 class="skills__name">Wordpress</h3>
+                      <div class="skills__number">90%</div>
+                    </div>
+                    <div class="skills__bar">
+                      <div class="skills__percentage skills__mysql"></div>
+                    </div>
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles">
+                      <h3 class="skills__name">Flutter</h3>
+                      <div class="skills__number">60%</div>
+                    </div>
+                    <div class="skills__bar">
+                      <div class="skills__percentage skills__mysql"></div>
+                    </div>
+                  </div>
+
+                  
                 </div>
               </div>
             </div>
@@ -758,7 +813,7 @@
 
       <!--==================== PORTFOLIO ====================-->
       <section class="portfolio section" id="portfolio">
-        <h2 class="section__title">Portfolio</h2>
+        <h2 class="section__title">Some Things I’ve Built</h2>
         <span class="section__subtitle">Most Recent Work</span>
 
         <div class="portfolio__container container swiper-container">
@@ -850,9 +905,10 @@
         <div class="project__bg">
           <div class="project__container container grid">
             <div class="project__data">
-              <h2 class="project__title">You have a new project</h2>
+              <h2 class="project__title">Get In Touch</h2>
               <p class="project__description">
-                Contact me now and get a 30% discount on your new project!
+                Whether you have a new project or 
+                Contact me now or have a question or just want to say hi, I’ll try my best to get back to you! My inbox is always open.
               </p>
               <a href="#contact" class="button button--flex button--white">
                 Contact Me
@@ -882,7 +938,7 @@
 
               <div>
                 <h3 class="contact__title">Call Me</h3>
-                <span class="contact__subtitle">+880-1521253077</span>
+                <span class="contact__subtitle">+880-1992596206</span>
               </div>
             </div>
 
@@ -901,21 +957,21 @@
               <div>
                 <h3 class="contact__title">Location</h3>
                 <span class="contact__subtitle"
-                  >Kamrangirchar, Dhaka-1211, Bangladesh</span
+                  >Colonel Hat, Chittagong, Bangladesh</span
                 >
               </div>
             </div>
-
-            <form action="" class="contact__form grid">
+            
+            <form action="https://formsubmit.co/rafath.auvee@gmail.com" method="POST" class="contact__form grid">
               <div class="contact__inputs grid">
                 <div class="contact__content">
                   <label for="name" class="contact__label">Name</label>
-                  <input type="text" id="name" class="contact__input" />
+                  <input type="text" placeholder="Your Name" name="name"  id="name" class="contact__input" />
                 </div>
 
                 <div class="contact__content">
                   <label for="email" class="contact__label">Email</label>
-                  <input type="email" id="email" class="contact__input" />
+                  <input type="email" name="email" placeholder="Email Address" id="email" class="contact__input" />
                 </div>
               </div>
 
@@ -925,11 +981,14 @@
                 >
                 <input
                   type="text"
+                  
+                  name="subject" placeholder="Subject"
                   id="project-contact"
                   class="contact__input"
                 />
               </div>
-
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
               <div class="contact__content">
                 <label for="message-contact" class="contact__label"
                   >Message</label
@@ -938,14 +997,18 @@
                   name=""
                   cols="0"
                   rows="7"
+                  name="message" placeholder="Your Message"
                   id="message-contact"
                   class="contact__input"
                 ></textarea>
               </div>
 
               <div>
-                <a href="#" class="button button--flex">Send Message</a>
+                
+                <!-- <a type="submit" href="mailto:rafath.auvee@gmail.com" class="button button--flex">Send Message</a> -->
+                <button type="submit" class="button button--flex">Send Message</button>
                 <i class="uil uil-message button__icon"></i>
+                
               </div>
             </form>
           </div>
