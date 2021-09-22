@@ -215,6 +215,11 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  .blog__img {
+    max-width: 60%;
+    margin-bottom: 50px;
+  }
+
   .nav__menu {
     position: fixed;
     bottom: -100%;
@@ -1004,6 +1009,10 @@ img {
 /* For small devices */
 
 @media screen and (max-width: 350px) {
+  .blog__img {
+    display: none;
+  }
+
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -1251,4 +1260,9 @@ img {
   .contact__inputs {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.blog__img {
+  max-width: 80%;
+  margin-bottom: 50px;
 }
