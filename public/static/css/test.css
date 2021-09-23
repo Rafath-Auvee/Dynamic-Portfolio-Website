@@ -1263,7 +1263,8 @@ img {
 }
 
 .blog__img {
-  max-width: 80%;
+  width: 80%;
+  height: 200px;
   margin-bottom: 50px;
 }
 
@@ -1276,4 +1277,18 @@ img {
 
 .created_at {
   font-size: 10px;
+}
+
+.blog_detail_title {
+  margin: 30px 0px;
+  font-size: 2rem;
+}
+
+.blog__content {
+  font-size: 20px;
+  background-color: none;
+}
+
+.blog_created_at {
+  margin: 10px 0px;
 }

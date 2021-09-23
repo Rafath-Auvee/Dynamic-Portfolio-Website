@@ -60,10 +60,30 @@
               </a>
             </li>
             <li class="nav__item">
-              <a href="blog.html" class="nav__link">
+              <a href="{% url 'blog' %}" class="nav__link">
                 <i class="uil uil-estate nav__icon"></i> Blog
               </a>
             </li>
+            {% if request.user.is_authenticated %}
+            <li class="nav__item">
+              <a href="{% url 'see_blog' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> All Blogs
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="{% url 'add_blog' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Add Blog
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="{% url 'logout_view' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Log Out
+              </a>
+            </li>
+
+            {% endif %}
           </ul>
           <i class="uil uil-times nav__close" id="nav-close"></i>
         </div>

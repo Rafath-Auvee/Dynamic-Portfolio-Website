@@ -1,92 +1,194 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
-  
-<!-- Mirrored from demo.bootstrapious.com/directory/1-6-1/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Apr 2021 09:21:30 GMT -->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Directory Theme by Bootstrapious</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Price Slider Stylesheets -->
-    <link rel="stylesheet" href="/media/css/nouislider.css">
+    <link rel="stylesheet" href="/media/css/nouislider.css" />
     <!-- Google fonts - Playfair Display-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700"
+    />
     <!-- Google fonts - Poppins-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700"
+    />
     <!-- swiper-->
-    <link rel="stylesheet" href="/media/css/swiper.min.css">
+    <link rel="stylesheet" href="/media/css/swiper.min.css" />
     <!-- Magnigic Popup-->
-    <link rel="stylesheet" href="/media/css/magnific-popup.css">
+    <link rel="stylesheet" href="/media/css/magnific-popup.css" />
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="/media/css/default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <!-- <link rel="stylesheet" href="/media/css/custom.css"> -->
-    <script src="/media/js/main.js"> </script>
+    <link
+      rel="stylesheet"
+      href="/media/css/default.css"
+      id="theme-stylesheet"
+    />
+    <!--==================== UNICONS ====================-->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="/media/css/swiper-bundle.min.css" />
 
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="/media/css/test.css" />
 
-   </head>
-  <body style="padding-top: 72px;">
-    <input type="hidden" id="csrf" value="{{csrf_token}}">
-    <header class="header">
-     
-      <nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white">
-        <div class="container-fluid">
-          <div class="d-flex align-items-center"><a class="navbar-brand py-1" href="/">
-          <h3>Postman Practice/</h3>
-          </div>
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-          <!-- Navbar Collapse -->
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            
-            <ul class="navbar-nav ml-auto">
-              
-              {% if request.user.is_authenticated %}
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn btn-info" href="{% url 'add_blog' %}">Add Blogs</a>
-              </li>
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn btn-danger" href="{% url 'logout_view' %}">Logout</a>
-              </li>
+    <title>Rafath Bin Zafar Auvee</title>
+  </head>
 
-              {% else %}
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn btn-primary" href="{% url 'login_view' %}">Login</a>
-              </li>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="{% url 'home' %}#home" class="nav__logo">Rafath</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="{% url 'home' %}#home" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'home' %}#about" class="nav__link">
+                <i class="uil uil-user nav__icon"></i> About
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'home' %}#skills" class="nav__link">
+                <i class="uil uil-file-alt nav__icon"></i> Skills
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'home' %}#services" class="nav__link">
+                <i class="uil uil-briefcase-alt nav__icon"></i> Services
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'home' %}#portfolio" class="nav__link">
+                <i class="uil uil-scenery nav__icon"></i> Portfolio
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'home' %}#contact" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Contact Me
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'blog' %}" class="nav__link active-link">
+                <i class="uil uil-estate nav__icon"></i> Blog
+              </a>
+            </li>
 
-              {% endif %}
+            {% if request.user.is_authenticated %}
+            <li class="nav__item">
+              <a href="{% url 'see_blog' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> All Blogs
+              </a>
+            </li>
 
-            </ul>
+            <li class="nav__item">
+              <a href="{% url 'add_blog' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Add Blog
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="{% url 'logout_view' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Log Out
+              </a>
+            </li>
+
+            {% endif %}
+          </ul>
+          <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
+
+        <div class="nav__btns">
+          <!--Theme change button-->
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
           </div>
         </div>
       </nav>
-      <!-- /Navbar -->
     </header>
-   
 
-    {% block start %}
+    {% block start %} {% endblock %}
 
+    <footer class="footer">
+      <div class="footer__bg">
+        <div class="footer__container container grid">
+          <div>
+            <h1 class="footer__title">Rafath</h1>
+            <span class="footer__subtitle">Full Stack Developer</span>
+          </div>
 
-    {% endblock %}
+          <ul class="footer__links">
+            <li>
+              <a href="#services" class="footer__link">Services</a>
+            </li>
 
+            <li>
+              <a href="#portfolio" class="footer__link">Portfolio</a>
+            </li>
 
-    <footer class="position-relative z-index-10 d-print-none">
-   
-      <div class="py-4 font-weight-light bg-gray-800 text-gray-300">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-left">
-              <p class="text-sm mb-md-0">Ekhane console log kora ache sign in/up er setar log</p>
-            </div>
-           
+            <li>
+              <a href="#contact" class="footer__link">Contact Me</a>
+            </li>
+          </ul>
+
+          <div class="footer__socials">
+            <a
+              href="https://www.facebook.com/auvee12/"
+              class="footer__social"
+              target="_blank"
+              class="footer__social"
+            >
+              <i class="uil uil-facebook-f"></i>
+            </a>
+
+            <a
+              href="https://www.instagram.com/rafath_auvee/"
+              target="_blank"
+              class="footer__social"
+              class="footer__social"
+            >
+              <i class="uil uil-instagram"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/auvee/"
+              target="_blank"
+              class="footer__social"
+              class="footer__social"
+            >
+              <i class="uil uil-linkedin-alt"></i>
+            </a>
           </div>
         </div>
+
+        <p class="footer__copy">&#169; Rafath Auvee. All rights reserved.</p>
       </div>
     </footer>
-   
-    
+
+    <!--==================== SCROLL TOP ====================-->
+    <a href="" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scroll__icon"></i>
+    </a>
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="/media/js/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="/media/js/test.js"></script>
+    <script src="/media/js/main.js"></script>
   </body>
-
-
 </html>

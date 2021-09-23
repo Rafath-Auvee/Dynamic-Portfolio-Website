@@ -5,7 +5,7 @@ function login() {
   var csrf = document.getElementById("csrf").value;
 
   if (username == "" && password == "") {
-    console.log("You must enter both");
+    alert("You must enter both");
   }
 
   var data = {
@@ -27,7 +27,7 @@ function login() {
       if (response.status == 200) {
         window.location.href = "/";
       } else {
-        console.log(response.message);
+        alert(response.message);
       }
     });
 }
@@ -38,7 +38,7 @@ function register() {
   var csrf = document.getElementById("csrf").value;
 
   if (username == "" && password == "") {
-    console.log("You must enter both");
+    alert("You must enter both");
   }
 
   var data = {
@@ -60,7 +60,7 @@ function register() {
       console.log(response);
       if (response.status == 200) {
       } else {
-        console.log(response.message);
+        alert(response.message);
       }
     });
 }

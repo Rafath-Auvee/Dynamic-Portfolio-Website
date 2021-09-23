@@ -26,44 +26,65 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav__logo">Rafath</a>
+        <a href="{% url 'home' %}#home" class="nav__logo">Rafath</a>
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
             <li class="nav__item">
-              <a href="index.html#home" class="nav__link ">
+              <a href="{% url 'home' %}#home" class="nav__link ">
                 <i class="uil uil-estate nav__icon"></i> Home
               </a>
             </li>
             <li class="nav__item">
-              <a href="index.html#about" class="nav__link">
+              <a href="{% url 'home' %}#about" class="nav__link">
                 <i class="uil uil-user nav__icon"></i> About
               </a>
             </li>
             <li class="nav__item">
-              <a href="index.html#skills" class="nav__link">
+              <a href="{% url 'home' %}#skills" class="nav__link">
                 <i class="uil uil-file-alt nav__icon"></i> Skills
               </a>
             </li>
             <li class="nav__item">
-              <a href="index.html#services" class="nav__link">
+              <a href="{% url 'home' %}#services" class="nav__link">
                 <i class="uil uil-briefcase-alt nav__icon"></i> Services
               </a>
             </li>
             <li class="nav__item">
-              <a href="index.html#portfolio" class="nav__link">
+              <a href="{% url 'home' %}#portfolio" class="nav__link">
                 <i class="uil uil-scenery nav__icon"></i> Portfolio
               </a>
             </li>
             <li class="nav__item">
-              <a href="index.html#contact" class="nav__link">
+              <a href="{% url 'home' %}#contact" class="nav__link">
                 <i class="uil uil-estate nav__icon"></i> Contact Me
               </a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link active-link">
+              <a href="{% url 'blog' %}" class="nav__link active-link">
                 <i class="uil uil-estate nav__icon"></i> Blog
               </a>
             </li>
+
+            {% if request.user.is_authenticated %}
+            <li class="nav__item">
+              <a href="{% url 'see_blog' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> All Blogs
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="{% url 'add_blog' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Add Blog
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="{% url 'logout_view' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Log Out
+              </a>
+            </li>
+
+            {% endif %}
           </ul>
           <i class="uil uil-times nav__close" id="nav-close"></i>
         </div>
@@ -108,8 +129,8 @@
                     services__button
                   "
                 >
-                <a href="{% url 'blog_detail' blog.slug %}"></a>
-                  View More
+                <a href="{% url 'blog_detail' blog.slug %}">
+                  View More</a>
                   <i class="uil uil-arrow-right button__icon"></i>
                 </span>
 
@@ -191,5 +212,6 @@
 
     <!--==================== MAIN JS ====================-->
     <script src="../media/js/test.js"></script>
+    <script src="../media/js/main.js"></script>
   </body>
 </html>

@@ -14,10 +14,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="media/css/swiper-bundle.min.css" />
+    
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="media/css/test.css" />
+    <link rel="stylesheet" href="/media/css/test.css" />
 
     <title>Rafath Bin Zafar Auvee</title>
   </head>
@@ -64,6 +64,29 @@
                 <i class="uil uil-estate nav__icon"></i> Blog
               </a>
             </li>
+
+            <!-- authenticated -->
+            {% if request.user.is_authenticated %}
+            <li class="nav__item">
+              <a href="{% url 'see_blog' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> All Blogs
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="{% url 'add_blog' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Add Blog
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="{% url 'logout_view' %}" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Log Out
+              </a>
+            </li>
+
+            {% endif %}
+
           </ul>
           <i class="uil uil-times nav__close" id="nav-close"></i>
         </div>
@@ -87,12 +110,12 @@
         <span class="section__subtitle">What I offer</span> -->
 
         <div class="services__container container">
-          <h1>Lorem ipsum dolor sit amet.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis exercitationem doloribus neque iusto placeat dolore explicabo officiis quis aliquid, eveniet odit quibusdam accusamus beatae. Voluptates qui accusantium autem aliquid ducimus!</p>
-          <br>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste eius vitae accusantium placeat, dignissimos cum mollitia, delectus eligendi nisi eum aspernatur doloribus ex. Quod, architecto!</p>
-          <br>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, saepe doloribus sequi officiis illum sed id consequatur fugiat nisi aut sint tenetur cumque non. Possimus praesentium suscipit quos consequuntur! Incidunt, perspiciatis. Odio iste debitis sapiente ex dolorum. Provident cumque, assumenda, dignissimos distinctio expedita, officiis esse facere accusamus repellendus fugit quo?</p>
+          <img class="img-fluid mb-5"
+                    src="/../media/{{blog_obj.image}}"
+                    alt="">
+          <h1 class ="blog_detail_title">{{blog_obj.title}} </h1>
+          <p class="blog_created_at">{{blog_obj.created_at}}</p>
+          <p  class= "blog__content">{{blog_obj.content|safe}}</p>
         </div>
       </section>
 
@@ -161,9 +184,16 @@
     </a>
 
     <!--==================== SWIPER JS ====================-->
-    <script src="media/js/swiper-bundle.min.js"></script>
-
+    
+<script src="/media/js/swiper-bundle.min.js"></script>
     <!--==================== MAIN JS ====================-->
-    <script src="media/js/test.js"></script>
+    <script src="/media/js/test.js"></script>
+    <script src="/media/js/main.js"></script>
+    
+
+  
+
+
+
   </body>
 </html>

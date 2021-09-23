@@ -29,4 +29,3 @@ def send_mail_to_user(token , email):
     recipient_list = [email]
     send_mail(subject, message , email_from, recipient_list)
     return True
-    
