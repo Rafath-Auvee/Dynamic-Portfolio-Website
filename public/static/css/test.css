@@ -1266,3 +1266,14 @@ img {
   max-width: 80%;
   margin-bottom: 50px;
 }
+
+.blog__title {
+  font-size: 13px;
+  margin-bottom: var(--mb-1);
+  margin-right: 15px;
+  font-weight: var(--font-medium);
+}
+
+.created_at {
+  font-size: 10px;
+}

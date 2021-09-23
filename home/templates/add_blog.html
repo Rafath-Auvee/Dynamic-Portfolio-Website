@@ -23,7 +23,7 @@
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="/media/css/default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="/media/css/custom.css">
+
     <script src="/media/js/main.js"> </script>
 
 
@@ -35,7 +35,7 @@
       <nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white">
         <div class="container-fluid">
           <div class="d-flex align-items-center"><a class="navbar-brand py-1" href="/">
-          <h3>Code Keen Blog</h3>
+          
           </div>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
           <!-- Navbar Collapse -->
@@ -53,7 +53,7 @@
 
               {% else %}
               <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn btn-primary" href="{% url 'login_view' %}">Add Blog</a>
+                <a class="btn btn-primary" href="{% url 'login_view' %}">login</a>
               </li>
 
               {% endif %}
@@ -67,7 +67,7 @@
 
 <div class="container mt-5">
 
-    <a href="{% url 'see_blog' %}" class="btn btn-warning">View Your blogs</a>
+    <!--  -->
 
     <form method="post" class="mt-5 pt-5 mb-5 pb-5" enctype="multipart/form-data">
         {% csrf_token %}

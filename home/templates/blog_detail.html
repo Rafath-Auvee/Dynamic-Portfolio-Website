@@ -14,10 +14,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="../media/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="media/css/swiper-bundle.min.css" />
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="../media/css/test.css" />
+    <link rel="stylesheet" href="media/css/test.css" />
 
     <title>Rafath Bin Zafar Auvee</title>
   </head>
@@ -60,7 +60,7 @@
               </a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link active-link">
+              <a href="blog.html" class="nav__link">
                 <i class="uil uil-estate nav__icon"></i> Blog
               </a>
             </li>
@@ -86,39 +86,13 @@
         <!-- <h2 class="section__title">Services</h2>
         <span class="section__subtitle">What I offer</span> -->
 
-        <div class="services__container container grid">
-          {% for blog in blogs %}
-            <!--===================== SERVICES 1 ====================-->
-            <div class="services__content">
-              <div>
-                <img
-                  src="/media/{{blog.image}}"
-                  alt=""
-                  class="blog__img"
-                />
-                <h3 class="blog__title">
-                  {{blog.title}} 
-                </h3>
-
-                <p class="created_at">{{blog.created_at}}</p>
-
-                <span
-                  class="
-                    button button--flex button--small button--link
-                    services__button
-                  "
-                >
-                <a href="{% url 'blog_detail' blog.slug %}"></a>
-                  View More
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </span>
-
-              </div>
-            
-            
-            </div>
-          {% endfor %}
-          
+        <div class="services__container container">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis exercitationem doloribus neque iusto placeat dolore explicabo officiis quis aliquid, eveniet odit quibusdam accusamus beatae. Voluptates qui accusantium autem aliquid ducimus!</p>
+          <br>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste eius vitae accusantium placeat, dignissimos cum mollitia, delectus eligendi nisi eum aspernatur doloribus ex. Quod, architecto!</p>
+          <br>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, saepe doloribus sequi officiis illum sed id consequatur fugiat nisi aut sint tenetur cumque non. Possimus praesentium suscipit quos consequuntur! Incidunt, perspiciatis. Odio iste debitis sapiente ex dolorum. Provident cumque, assumenda, dignissimos distinctio expedita, officiis esse facere accusamus repellendus fugit quo?</p>
         </div>
       </section>
 
@@ -187,9 +161,9 @@
     </a>
 
     <!--==================== SWIPER JS ====================-->
-    <script src="../media/js/swiper-bundle.min.js"></script>
+    <script src="media/js/swiper-bundle.min.js"></script>
 
     <!--==================== MAIN JS ====================-->
-    <script src="../media/js/test.js"></script>
+    <script src="media/js/test.js"></script>
   </body>
 </html>
