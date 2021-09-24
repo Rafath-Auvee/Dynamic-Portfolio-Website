@@ -1,1 +1,1 @@
-web: gunicorn rafath_auvee.wsgi --log-file
+web: gunicorn rafath_auvee.wsgi --log-file -
