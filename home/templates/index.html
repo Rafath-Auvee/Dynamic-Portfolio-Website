@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,10 +15,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="media/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static '/css/swiper-bundle.min.css' %}" />
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="media/css/test.css" />
+    <link rel="stylesheet" href="{% static 'css/test.css' %}"/>
 
     <title>Rafath Bin Zafar Auvee</title>
   </head>
@@ -150,7 +151,7 @@
                     class="home__blob-img"
                     x="12"
                     y="18"
-                    xlink:href="media/img/perfil.png"
+                    xlink:href="{% static /img/perfil.png"
                   />
                 </g>
               </svg>
@@ -221,14 +222,14 @@
             <div class="about__buttons">
               <a
                 download=""
-                href="media/pdf/Resume.pdf"
+                href="{% static '/pdf/Resume.pdf' %}"
                 class="button button--flex"
               >
                 Download CV <i class="uil uil-download-alt button__icon"></i>
               </a>
             </div>
           </div>
-          <img src="media/img/rafath.png" alt="" class="about__img" />
+          <img src="{% static '/img/rafath.png'%} " alt="" class="about__img"  />
         </div>
       </section>
 
@@ -843,7 +844,7 @@
             <!--======================== PORTFOLIO 1 =============-->
             <div class="portfolio__content grid swiper-slide">
               <img
-                src="media/img/uftl.jpg"
+                src="{% static '/img/uftl.jpg' %}"
                 alt=""
                 class="portfolio__img"
               />
@@ -866,7 +867,7 @@
             <!--======================== PORTFOLIO 2 =============-->
             <div class="portfolio__content grid swiper-slide">
               <img
-                src="media/img/bmrc.png"
+                src="{% static '/img/bmrc.png' %}"
                 alt=""
                 class="portfolio__img"
               />
@@ -889,7 +890,7 @@
             <!--======================== PORTFOLIO 3 =============-->
             <div class="portfolio__content grid swiper-slide">
               <img
-                src="media/img/trass.png"
+                src="{% static '/img/trass.png' %}"
                 alt=""
                 class="portfolio__img"
               />
@@ -947,7 +948,7 @@
             <section class="testimonial section">
         <!--=======This feature is skipped for now========-->
         <h2 class="section__title">Testimonial</h2>
-        <span class="section__subtitle"></span>
+        <span class="section__subtitle">(Scroll to navigate)</span>
 
         <div class="testimonial__container container swiper-container">
           <div class="swiper-wrapper">
@@ -957,7 +958,7 @@
               <div class="testimonial__data">
                 <div class="testimonial__header">
                   
-                  <img src="/media/{{x.image}}" alt="" class = "testimonial__img">
+                  <img src="{{ x.image.url }}" alt="" class = "testimonial__img ">
 
                   <div>
                     <a href="{{x.profile_url}}">
@@ -978,6 +979,11 @@
             </div>
             {% endfor %}
           </div>
+
+          <!--============ Add Arrows =============-->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <!--============ Add Pagination =============-->
           <div class="swiper-pagination swiper-pagination-testimonial"></div>
         </div>
       </section>
@@ -1135,9 +1141,9 @@
     </a>
 
     <!--==================== SWIPER JS ====================-->
-    <script src="media/js/swiper-bundle.min.js"></script>
+    <script src="{% static '/js/swiper-bundle.min.js' %}"></script>
 
     <!--==================== MAIN JS ====================-->
-    <script src="media/js/test.js"></script>
+    <script src="{% static '/js/test.js' %}"></script>
   </body>
 </html>

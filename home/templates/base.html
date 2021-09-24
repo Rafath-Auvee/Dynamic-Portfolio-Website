@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+{% load static %} <<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,13 +16,16 @@
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700"
     />
     <!-- swiper-->
-    <link rel="stylesheet" href="/media/css/swiper.min.css" />
+
+    <link rel="stylesheet" href="{% static '/css/swiper.min.css' %}" />
     <!-- Magnigic Popup-->
-    <link rel="stylesheet" href="/media/css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="{% static '/css/magnific-popup.css' %}" />
     <!-- theme stylesheet-->
+
     <link
       rel="stylesheet"
-      href="/media/css/default.css"
+      href="{% static '/css/default.css' %}"
       id="theme-stylesheet"
     />
     <!--==================== UNICONS ====================-->
@@ -35,10 +38,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="/media/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static '/css/swiper-bundle.min.css' %}" />
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="/media/css/test.css" />
+    <link rel="stylesheet" href="{% static 'css/test.css' %}" />
 
     <title>Rafath Bin Zafar Auvee</title>
   </head>
@@ -186,10 +189,10 @@
     </a>
 
     <!--==================== SWIPER JS ====================-->
-    <script src="/media/js/swiper-bundle.min.js"></script>
+    <script src="{% static '/js/swiper-bundle.min.js' %}"></script>
 
     <!--==================== MAIN JS ====================-->
-    <script src="/media/js/test.js"></script>
-    <script src="/media/js/main.js"></script>
+    <script src="{% static '/js/test.js' %}"></script>
+    <script src="{% static '/js/main.js' %}"></script>
   </body>
 </html>

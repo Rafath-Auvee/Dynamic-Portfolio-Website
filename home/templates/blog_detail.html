@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,10 +15,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!--==================== SWIPER CSS ====================-->
-    
+    <link rel="stylesheet" href="{% static '/css/swiper-bundle.min.css' %}" />
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="/media/css/test.css" />
+    <link rel="stylesheet" href="{% static 'css/test.css' %}"/>
 
     <title>Rafath Bin Zafar Auvee</title>
   </head>
@@ -26,46 +27,45 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav__logo">Rafath</a>
+        <a href="{% url 'home' %}#home" class="nav__logo">Rafath</a>
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
             <li class="nav__item">
-              <a href="index.html#home" class="nav__link ">
+              <a href="{% url 'home' %}#home" class="nav__link ">
                 <i class="uil uil-estate nav__icon"></i> Home
               </a>
             </li>
             <li class="nav__item">
-              <a href="index.html#about" class="nav__link">
+              <a href="{% url 'home' %}#about" class="nav__link">
                 <i class="uil uil-user nav__icon"></i> About
               </a>
             </li>
             <li class="nav__item">
-              <a href="index.html#skills" class="nav__link">
+              <a href="{% url 'home' %}#skills" class="nav__link">
                 <i class="uil uil-file-alt nav__icon"></i> Skills
               </a>
             </li>
             <li class="nav__item">
-              <a href="index.html#services" class="nav__link">
+              <a href="{% url 'home' %}#services" class="nav__link">
                 <i class="uil uil-briefcase-alt nav__icon"></i> Services
               </a>
             </li>
             <li class="nav__item">
-              <a href="index.html#portfolio" class="nav__link">
+              <a href="{% url 'home' %}#portfolio" class="nav__link">
                 <i class="uil uil-scenery nav__icon"></i> Portfolio
               </a>
             </li>
             <li class="nav__item">
-              <a href="index.html#contact" class="nav__link">
+              <a href="{% url 'home' %}#contact" class="nav__link">
                 <i class="uil uil-estate nav__icon"></i> Contact Me
               </a>
             </li>
             <li class="nav__item">
-              <a href="blog.html" class="nav__link">
+              <a href="{% url 'blog' %}" class="nav__link active-link">
                 <i class="uil uil-estate nav__icon"></i> Blog
               </a>
             </li>
 
-            <!-- authenticated -->
             {% if request.user.is_authenticated %}
             <li class="nav__item">
               <a href="{% url 'see_blog' %}" class="nav__link">
@@ -86,7 +86,6 @@
             </li>
 
             {% endif %}
-
           </ul>
           <i class="uil uil-times nav__close" id="nav-close"></i>
         </div>
@@ -185,12 +184,12 @@
 
     <!--==================== SWIPER JS ====================-->
     
-<script src="/media/js/swiper-bundle.min.js"></script>
-    <!--==================== MAIN JS ====================-->
-    <script src="/media/js/test.js"></script>
-    <script src="/media/js/main.js"></script>
-    
+    <!--==================== SWIPER JS ====================-->
+    <script src="{% static '/js/swiper-bundle.min.js' %}"></script>
 
+    <!--==================== MAIN JS ====================-->
+    <script src="{% static '/js/test.js' %}"></script>
+    <script src="{% static '/js/main.js' %}"></script>
   
 
 

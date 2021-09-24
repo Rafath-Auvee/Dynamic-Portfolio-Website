@@ -1,1 +1,0 @@
-web: gunicorn rafath_auvee.wsgi --log-file -
