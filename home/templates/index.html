@@ -159,8 +159,7 @@
               <h1 class="home__title">Hello from Rafath,</h1>
               <h3 class="home__subtitle">Full-Stack Web Developer</h3>
               <p class="home__description">
-                High level experience in web application development and
-                producing quality work.
+                I'm a web developer with a passion for development and design.
               </p>
               <a href="#contact" class="button button--flex">
                 Contact Me <i class="uil uil-message button__icon"></i>
@@ -186,9 +185,12 @@
         <div class="about__container container grid">
           <div class="about__data">
             <p class="about__description">
-              Web developer, with extensive knowledge and years of experience,
-              working in web technologies and Ui/Ux design, delivering quality
-              work.
+              Hello! My name is Rafath Bin Zafar Auvee. An enthusiastic,
+              self-taught, motivated programmer.
+              <br> 
+              I'm currently a third year student at Bangladesh Army University of Science and Technology. pursuing a degree in Computer Science and Engineering.
+              <br /> For me, computer programming is love, passion, exploration
+              & much more. I build things for the web.
             </p>
 
             <div class="about__info">
@@ -942,8 +944,42 @@
       </section>
 
       <!--==================== TESTIMONIAL ====================-->
-      <section class="testimonial section">
+            <section class="testimonial section">
         <!--=======This feature is skipped for now========-->
+        <h2 class="section__title">Testimonial</h2>
+        <span class="section__subtitle"></span>
+
+        <div class="testimonial__container container swiper-container">
+          <div class="swiper-wrapper">
+              <!-- testimonial one -->
+            {% for x in test %}
+            <div class="testimonial__content swiper-slide">
+              <div class="testimonial__data">
+                <div class="testimonial__header">
+                  
+                  <img src="/media/{{x.image}}" alt="" class = "testimonial__img">
+
+                  <div>
+                    <a href="{{x.profile_url}}">
+                    <h3 class="testimonial__name">
+                      {{x.name}} 
+                    </h3>
+                    </a>
+                    <span class="testimonial__client">
+                      {{x.title}}
+                    </span>
+
+                  </div>
+                </div>
+                
+              </div>
+              
+              <p class="testimonial__description">{{x.review}}</p>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination swiper-pagination-testimonial"></div>
+        </div>
       </section>
 
       <!--==================== CONTACT ME ====================-->
@@ -1008,7 +1044,7 @@
                 />
               </div>
               <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
+              <input type="hidden" name="_next" value="http://127.0.0.1:8000/thankyou.html">
               <div class="contact__content">
                 <label for="message-contact" class="contact__label"
                   >Message</label

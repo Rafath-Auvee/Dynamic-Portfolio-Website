@@ -9,7 +9,13 @@ class Profile(models.Model):
     user = models.ForeignKey(User , on_delete=models.CASCADE)
     is_verified = models.BooleanField(default=False)
     token = models.CharField(max_length=100)
-    
+
+class Testimonial(models.Model):
+    name= models.CharField(max_length=1000)
+    title = models.CharField(max_length=1000)
+    profile_url = models.CharField(max_length=1000, blank=True)
+    review = models.CharField(max_length=1000)
+    image = models.ImageField(upload_to='recommend')
     
 
 class BlogModel(models.Model):

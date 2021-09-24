@@ -29,7 +29,13 @@ def logout_view(request):
 
 
 def home(request):
-  return render(request, 'index.html');
+    context = {}
+    try:
+        test = Testimonial.objects.all()
+        context['test'] =  test
+    except Exception as e:
+        print(e)  
+    return render(request, 'index.html', context);
 
 def blog(request):
   context = {'blogs' : BlogModel.objects.all()}
@@ -143,8 +149,6 @@ def blog_delete(request , id):
         print(e)
 
     return redirect('/see-blog/')
-
-
 
 def verify(request,token):
     try:
