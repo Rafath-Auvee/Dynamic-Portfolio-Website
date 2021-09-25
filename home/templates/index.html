@@ -60,9 +60,19 @@
                 <i class="uil uil-estate nav__icon"></i> Contact Me
               </a>
             </li>
+
+            <li class="nav__item">
+              <a href="#testimonial" class="nav__link">
+                <i class="uil uil-user-location nav__icon"></i>Testimonial
+                
+              </a>
+            </li>
+
             <li class="nav__item">
               <a href="{% url 'blog' %}" class="nav__link">
-                <i class="uil uil-estate nav__icon"></i> Blog
+                <i class="uil uil-comment-message nav__icon"></i>Blog
+                <!-- <i class="uil uil-document-layout-right nav__icon"></i>Blog -->
+                <!-- <i class="uil uil-estate nav__icon"></i> Blog -->
               </a>
             </li>
             {% if request.user.is_authenticated %}
@@ -204,7 +214,7 @@
               </div>
 
               <div>
-                <span class="about__info-title">01+</span>
+                <span class="about__info-title">02</span>
                 <span class="about__info-name"
                   >Companies <br />
                   worked
@@ -215,7 +225,8 @@
                 <span class="about__info-title">30+</span>
                 <span class="about__info-name"
                   >Completed <br />
-                  projects
+                  projects<br />
+                  (Fiverr included)
                 </span>
               </div>
             </div>
@@ -945,7 +956,7 @@
       </section>
 
       <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section">
+      <section class="testimonial section" id="testimonial">
         <!--=======This feature is skipped for now========-->
         <h2 class="section__title">Testimonial</h2>
         <span class="section__subtitle">(Scroll to navigate)</span>
